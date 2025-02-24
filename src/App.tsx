@@ -1,27 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Logo from "./logo.svg?react";
+import "./index.css";
 
-function App() {
-  console.log(process.env);
+export function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Logo className="App-logo" desc="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React {process.env.REACT_APP_TEST_VAR}
+        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+          Learn React {import.meta.env.VITE_TEST_VAR}
         </a>
       </header>
     </div>
   );
 }
-
-export default App;
